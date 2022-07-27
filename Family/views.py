@@ -6,11 +6,19 @@ from Family.models import Members
 
 def create_members(request):
     new_member = Members.objects.create(
-        name='Maria',
+        name='Ana',
         last_name='Roman',
-        relation='Prima'
+        relation='Hermana'
     )
     context = {
         'new_member': new_member
     }
     return render(request, 'new_member.html', context=context)
+
+
+def list_members(request):
+    members = Members.objects.all()
+    context = {
+        'members': members
+    }
+    return render(request, 'family_members.html', context=context)

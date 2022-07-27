@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from MVTMiguel.views import welcome
-from Family.views import create_members
+from Family.views import create_members, list_members
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('welcome/', welcome, name='welcome'),
-    path('create_members/', create_members, name='create_members')
+    path('create_members/', create_members, name='create_members'),
+    path('list_members/', list_members, name='list_members')
 ]
