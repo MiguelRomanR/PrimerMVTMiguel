@@ -1,5 +1,6 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def welcome(request):
-    return HttpResponse('Hola Bienvenido a mi primer MVT con Django')
+    return render(request, 'welcome.html', context={})
