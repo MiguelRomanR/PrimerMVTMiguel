@@ -9,3 +9,4 @@ class Members(models.Model):
     last_name = models.CharField(max_length=40)
     relation = models.CharField(max_length=40)
     creation_date = models.DateField(auto_now_add=True)
+    age = models.IntegerField()
