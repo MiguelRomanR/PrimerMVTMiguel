@@ -1,15 +1,27 @@
-<ol>
-    {% for member in members %}
-
-        <h1><li>Familiar</li></h1>
-        <ul>
-            <li><h2>Nombre: {{member.name}}</h2></li>
-            <li><h2>Apellido: {{member.last_name}}</h2></li>
-            <li><h2>Vinculo: {{member.relation}}</h2></li>
-            <li><h2>Edad: {{member.age}}</h2></li>
-            <li><h2>Fecha de Registro: {{member.creation_date}}</h2></li>
-        </ul>
-        <br>
-
-    {% endfor %}
-</ol>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family | Members</title>
+    <link rel="icon" href="/static/vitae_p.ico">
+</head>
+<body>
+    <ol>
+        {% for member in members %}
+    
+            <h1><li>Familiar</li></h1>
+            <ul>
+                <li><h2>Nombre: {{member.name}}</h2></li>
+                <li><h2>Apellido: {{member.last_name}}</h2></li>
+                <li><h2>Vinculo: {{member.relation}}</h2></li>
+                <li><h2>Edad: {{member.age}} años</h2></li>
+                <li><h2>Fecha de Registro: {{member.creation_date}}</h2></li>
+            </ul>
+            <br>
+    
+        {% endfor %}
+    </ol>
+</body>
+</html>
