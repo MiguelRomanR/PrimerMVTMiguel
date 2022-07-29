@@ -20,6 +20,7 @@ from Family.views import create_members, list_members
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', welcome, name='welcome'),
     path('welcome/', welcome, name='welcome'),
     path('create_members/', create_members, name='create_members'),
     path('list_members/', list_members, name='list_members')
